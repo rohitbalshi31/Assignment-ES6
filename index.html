@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ES6 Assignment</title>
+</head>
+<body>
+    <h1>ES6 Assignment</h1>
+    <script type="text/javascript">
+        var Mobile = function(model_no, sprice) {
+            this.model = model_no;
+            this.price = 4000;
+            this.sp = sprice;
+            this.sellingprice = function() {
+                return ( this.sp - this.price );
+            };
+            this.data = function() {
+                document.write(" model No: " + this.model); 
+                document.write("<br>");
+                document.write("price: " + this.sellingprice());
+                document.write("<br>");
+            }
+        };
+        var samsung = new Mobile ('Galaxy', 30000);
+        var nokia = new Mobile ('G20', 26000);
+        var apple = new Mobile ("A14 Pro", 78000);
+        samsung.data();
+        nokia.data();
+        apple.data();
+    </script>
+</body>
+</html>
